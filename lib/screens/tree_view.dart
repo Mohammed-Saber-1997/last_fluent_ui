@@ -1,7 +1,6 @@
 import '../cubit/app_cubit.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'navigation_screen.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class TreeViewScreen extends StatelessWidget {
   const TreeViewScreen({Key? key}) : super(key: key);
@@ -32,62 +31,56 @@ class TreeViewScreen extends StatelessWidget {
                   items: [
                     TreeViewItem(
                       expanded: false,
-                      content: Text(
-                        AppLocalizations.of(context)!.levelOne,
-                        style: const TextStyle(fontSize: 23),
+                      content: const Text(
+                        'Level One',
+                        style: TextStyle(fontSize: 23),
                       ),
                       children: [
                         TreeViewItem(
                           expanded: false,
-                          content: Text(
-                            AppLocalizations.of(context)!.levelTwo + ' 1',
-                            style: const TextStyle(fontSize: 20),
+                          content: const Text(
+                            'Level One' + ' 1',
+                            style: TextStyle(fontSize: 20),
                           ),
                           children: [
                             TreeViewItem(
                               expanded: false,
-                              content: Text(
-                                AppLocalizations.of(context)!.levelThree +
-                                    ' 1.1',
-                                style: const TextStyle(fontSize: 17),
+                              content: const Text(
+                                'Level Three' + ' 1.1',
+                                style: TextStyle(fontSize: 17),
                               ),
                               children: [
                                 TreeViewItem(
-                                  content: Text(
-                                    AppLocalizations.of(context)!.levelFour +
-                                        ' 1.1.1',
-                                    style: const TextStyle(fontSize: 14),
+                                  content: const Text(
+                                    'Level Four' + ' 1.1.1',
+                                    style: TextStyle(fontSize: 14),
                                   ),
                                 ),
                                 TreeViewItem(
-                                  content: Text(
-                                    AppLocalizations.of(context)!.levelFour +
-                                        ' 1.1.2',
-                                    style: const TextStyle(fontSize: 14),
+                                  content: const Text(
+                                    'Level Four' + ' 1.1.2',
+                                    style: TextStyle(fontSize: 14),
                                   ),
                                 ),
                               ],
                             ),
                             TreeViewItem(
                               expanded: false,
-                              content: Text(
-                                AppLocalizations.of(context)!.levelThree +
-                                    ' 1.2',
-                                style: const TextStyle(fontSize: 17),
+                              content: const Text(
+                                'Level Three' + ' 1.2',
+                                style: TextStyle(fontSize: 17),
                               ),
                               children: [
                                 TreeViewItem(
-                                  content: Text(
-                                    AppLocalizations.of(context)!.levelFour +
-                                        ' 1.2.1',
-                                    style: const TextStyle(fontSize: 14),
+                                  content: const Text(
+                                    'Level Four' + ' 1.2.1',
+                                    style: TextStyle(fontSize: 14),
                                   ),
                                 ),
                                 TreeViewItem(
-                                  content: Text(
-                                    AppLocalizations.of(context)!.levelFour +
-                                        ' 1.2.2',
-                                    style: const TextStyle(fontSize: 14),
+                                  content: const Text(
+                                    'Level Four' + ' 1.2.2',
+                                    style: TextStyle(fontSize: 14),
                                   ),
                                 ),
                               ],
@@ -96,55 +89,49 @@ class TreeViewScreen extends StatelessWidget {
                         ),
                         TreeViewItem(
                           expanded: false,
-                          content: Text(
-                            AppLocalizations.of(context)!.levelTwo + ' 2',
-                            style: const TextStyle(fontSize: 20),
+                          content: const Text(
+                            'Level One' + ' 2',
+                            style: TextStyle(fontSize: 20),
                           ),
                           children: [
                             TreeViewItem(
                               expanded: false,
-                              content: Text(
-                                AppLocalizations.of(context)!.levelThree +
-                                    ' 2.1',
-                                style: const TextStyle(fontSize: 17),
+                              content: const Text(
+                                'Level Three' + ' 2.1',
+                                style: TextStyle(fontSize: 17),
                               ),
                               children: [
                                 TreeViewItem(
-                                  content: Text(
-                                    AppLocalizations.of(context)!.levelFour +
-                                        ' 2.1.1',
-                                    style: const TextStyle(fontSize: 14),
+                                  content: const Text(
+                                    'Level Four' + ' 2.1.1',
+                                    style: TextStyle(fontSize: 14),
                                   ),
                                 ),
                                 TreeViewItem(
-                                  content: Text(
-                                    AppLocalizations.of(context)!.levelFour +
-                                        ' 2.1.2',
-                                    style: const TextStyle(fontSize: 14),
+                                  content: const Text(
+                                    'Level Four' + ' 2.1.2',
+                                    style: TextStyle(fontSize: 14),
                                   ),
                                 ),
                               ],
                             ),
                             TreeViewItem(
                               expanded: false,
-                              content: Text(
-                                AppLocalizations.of(context)!.levelThree +
-                                    ' 2.2',
-                                style: const TextStyle(fontSize: 17),
+                              content: const Text(
+                                'Level Three' + ' 2.2',
+                                style: TextStyle(fontSize: 17),
                               ),
                               children: [
                                 TreeViewItem(
-                                  content: Text(
-                                    AppLocalizations.of(context)!.levelFour +
-                                        ' 2.2.1',
-                                    style: const TextStyle(fontSize: 14),
+                                  content: const Text(
+                                    'Level Four' + ' 2.2.1',
+                                    style: TextStyle(fontSize: 14),
                                   ),
                                 ),
                                 TreeViewItem(
-                                  content: Text(
-                                    AppLocalizations.of(context)!.levelFour +
-                                        ' 2.2.2',
-                                    style: const TextStyle(fontSize: 14),
+                                  content: const Text(
+                                    'Level Four' + ' 2.2.2',
+                                    style: TextStyle(fontSize: 14),
                                   ),
                                 ),
                               ],

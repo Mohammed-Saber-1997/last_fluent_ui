@@ -18,6 +18,7 @@ class AppCubit extends Cubit<AppStates> {
   void changeAppMode() {
     isDark = !isDark;
     emit(AppChangeModeState());
+    print(isDark);
   }
 
   int navigationCurrentPage = 0;

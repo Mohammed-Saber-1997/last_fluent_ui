@@ -1,5 +1,4 @@
 import 'package:fluent_ui/fluent_ui.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({Key? key}) : super(key: key);
@@ -13,40 +12,39 @@ class _NavigationScreenState extends State<NavigationScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.red,
-      child: NavigationView(
-        pane: NavigationPane(
-          selected: currentPage,
-          onChanged: (i) => setState(
-            () {
-              currentPage = i;
-              print(currentPage);
-            },
-          ), // displayMode: PaneDisplayMode.top,
-          items: <NavigationPaneItem>[
-            PaneItem(
-              icon: const Icon(FluentIcons.home),
-              title: Text(AppLocalizations.of(context)!.home),
-            ),
-            PaneItem(
-              icon: const Icon(FluentIcons.fabric_folder),
-              title: Text(AppLocalizations.of(context)!.files),
-            ),
-            PaneItem(
-              icon: const Icon(FluentIcons.settings),
-              title: Text(AppLocalizations.of(context)!.settings),
-            ),
-          ],
+    return NavigationView(
+      appBar: const NavigationAppBar(),
+      pane: NavigationPane(
+        selected: currentPage,
+        onChanged: (i) => setState(
+          () {
+            currentPage = i;
+            print(currentPage);
+          },
         ),
-        content: NavigationBody(
-          index: currentPage,
-          children: <Widget>[
-            Center(child: Text(AppLocalizations.of(context)!.home)),
-            Center(child: Text(AppLocalizations.of(context)!.files)),
-            Center(child: Text(AppLocalizations.of(context)!.settings)),
-          ],
-        ),
+        // displayMode: PaneDisplayMode.top,
+        items: <NavigationPaneItem>[
+          PaneItem(
+            icon: const Icon(FluentIcons.home),
+            title: const Text('Home'),
+          ),
+          PaneItem(
+            icon: const Icon(FluentIcons.fabric_folder),
+            title: const Text('Files'),
+          ),
+          PaneItem(
+            icon: const Icon(FluentIcons.settings),
+            title: const Text('Settings'),
+          ),
+        ],
+      ),
+      content: NavigationBody(
+        index: currentPage,
+        children: const <Widget>[
+          Center(child: Text('Home')),
+          Center(child: Text('Files')),
+          Center(child: Text('Settings')),
+        ],
       ),
     );
   }
